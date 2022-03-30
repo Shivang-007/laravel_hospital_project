@@ -10,6 +10,7 @@
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
     <title>One Health - Medical Center HTML5 Template</title>
+    
 
     <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -86,6 +87,9 @@
                         </li>
                         @if(Route::has('login'))
                         @auth
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('myappointment')}}">My Appointment</a>
+                        </li>
                         <x-app-layout>
                         </x-app-layout>
                         @else
@@ -102,6 +106,14 @@
             </div> <!-- .container -->
         </nav>
     </header>
+    <div>
+        @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{session()->get('message')}}
+            <button type="button" class="close" data-dismiss="alert">x</button>
+        </div>
+        @endif
+    </div>
 
     <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
         <div class="hero-section">

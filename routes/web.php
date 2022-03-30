@@ -29,3 +29,6 @@ Route::post('/upload_doctor',[AdminController::class,'upload_doctor']);
 
 
 Route::get('/home',[HomeController::class,'redirect']);
+Route::post('/appointment',[HomeController::class,'appointment']);
+Route::get('/myappointment',[HomeController::class,'myappointment']);
+
