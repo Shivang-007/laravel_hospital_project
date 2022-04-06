@@ -64,4 +64,10 @@ class HomeController extends Controller
             return redirect()->back();
         }
     }
+
+    public function cencel_appoint($id){
+        $data=Appointment::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
 }

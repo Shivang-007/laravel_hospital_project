@@ -127,7 +127,7 @@
               <td>{{$appoint->date}}</td>
               <td>{{$appoint->message}}</td>
               <td>{{$appoint->status}}</td>
-              <td><button type="button" class="btn btn-danger"><a href="">Cencel</a></button></td>
+              <td><a href="{{url('cencel_appoint',$appoint->id)}}" class="btn btn-danger" onclick="return confirm('are you sure to cencel the appointment')">Cencel</a></td>
 
             </tr>
             @endforeach
