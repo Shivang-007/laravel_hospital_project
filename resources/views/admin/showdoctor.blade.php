@@ -43,6 +43,7 @@
                         <th scope="col">Phone</th>
                         <th scope="col">Speciality</th>
                         <th scope="col">Image</th>
+                        <th scope="col" colspan="2">Operation</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -53,7 +54,6 @@
                       <td>{{$datas->email}}</td>
                       <td>{{$datas->phone}}</td>
                       <td>{{$datas->speciality}}</td>
-                      <td>doctorimage/{{$datas->image}}</td>
                       <td><img height="100" width="100" src="doctorimage/{{$datas->image}}" alt="not found"></td> 
                       <td><a href="{{url('update',$datas->id)}}" class="btn btn-success">Update</a></td>
                       <td><a href="{{url('delete',$datas->id)}}" class="btn btn-danger" onclick="return confirm('are you sure to delete this')">Delete</a></td>

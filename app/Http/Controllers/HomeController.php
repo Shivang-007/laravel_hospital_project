@@ -8,7 +8,7 @@ use App\Models\User;
 use App\Models\Appointment;
 
 use App\Models\Doctor;
-use Prophecy\Argument\Token\ApproximateValueToken;
+
 
 class HomeController extends Controller
 {
@@ -20,7 +20,7 @@ class HomeController extends Controller
                 $doctor = Doctor::all();
                 return view('user.home', compact('doctor'));
             } else {
-                return view('admin.home');
+                return redirect('/showappointment');
             }
         } else {
             return redirect()->back();
@@ -56,7 +56,6 @@ class HomeController extends Controller
     public function myappointment()
     {
         if (Auth::id()) {
-
             $userid=Auth::user()->id;
             $appoint=Appointment::where('user_id',$userid)->get();
             return view('user.myappointment',compact('appoint'));

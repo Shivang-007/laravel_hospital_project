@@ -25,6 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/',[HomeController::class,'index']);
 
 //admin panel
+// Route::get('/showappointment',[AdminController::class,'adminHome']);
 Route::get('/add_doctor',[AdminController::class,'add_doctor']);
 Route::post('/upload_doctor',[AdminController::class,'upload_doctor']);
 Route::get('/showappointment',[AdminController::class,'showappointment']);

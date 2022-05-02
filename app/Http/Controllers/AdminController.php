@@ -12,6 +12,18 @@ use Illuminate\Support\Facades\Notification;
 class AdminController extends Controller
 {
     //
+    // public function adminHome()
+    // {
+    //     if(Auth::id()){
+    //         if(Auth::user()->usertype==1){
+    //          return view('admin.showappointment');
+    //         }else{
+    //             return redirect()->back();
+    //         }
+    //      }else{
+    //          return redirect('login');
+    //      }    
+    // }
     public function add_doctor(){
         if(Auth::id()){
            if(Auth::user()->usertype==1){
